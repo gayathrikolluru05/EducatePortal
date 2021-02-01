@@ -4,6 +4,31 @@ import Routes from './Routes';
 
 import history from './history';
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+const Para = styled.p`
+  font-size: 1.5em;
+  text-align: center;
+  color: mediumseagreen;
+`;
 
 class Intro extends Component {
     constructor(props) {
@@ -32,17 +57,17 @@ class Intro extends Component {
         }
         return (
             <form>
-                <h1 style={{
+                <Title style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center"
-                }}>Hi there! Welcome to our education showcase.</h1>
+                }}>Hi there! Welcome to our education showcase.</Title>
                 
-                <p style={{
+                <Para style={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center"
-                }}>Type your Name and click Enter to begin below!</p>
+                }}>Type your Name and click Enter to begin below!</Para>
 
                 <input 
                         type="text"
@@ -52,8 +77,8 @@ class Intro extends Component {
                     }
                     onChange={this.handleChange}
                  />
-                <button  onClick= {this.myChangeHandler}
-                >Enter</button>
+                <Button  onClick= {this.myChangeHandler}
+                >Enter</Button>
                 
             
             </form>

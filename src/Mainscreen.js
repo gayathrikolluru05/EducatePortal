@@ -4,7 +4,32 @@ import ReactModal from 'react-modal';
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import styled from 'styled-components';
 
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "palevioletred" : "white"};
+  color: ${props => props.primary ? "white" : "palevioletred"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+const Para = styled.p`
+  font-size: 1.5em;
+  text-align: center;
+  color: mediumseagreen;
+`;
 
 class Mainscreen extends Component {
    
@@ -100,7 +125,7 @@ class Mainscreen extends Component {
                     
                 />
 
-                <p> Start Date: </p>
+                    <p> Start Date: </p>
                 <input
                     type="date"
                     name="startdate"
@@ -126,35 +151,33 @@ class Mainscreen extends Component {
                     
                 </form>
 
-                <p> name:{this.state.name}</p>
-                <p>majors: {this.state.majors}</p>
-                <p>startdate: {this.state.startdate}</p>
-                <p>enddate: {this.state.enddate}</p>
-
-                    <button onClick={this.handleCloseModal}>Add</button></ReactModal>);
+                    <Button onClick={this.handleCloseModal}>Add</Button></ReactModal>);
                
         }
 
        
         return (
-            <form>
+            <form >
 
-               <div>
-                <h1 style={{
+                <div >
+                    <Title style={{
+                    
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center"
-                    }}> Welcome to {this.state.username}'s educational  Portal.</h1>
+                    
+                    } 
+                    }> Welcome to {this.state.username}'s educational  Portal.</Title>
                 
                
-                    <button onClick={this.handleOpenModal}
-                    >Add Education</button>
+                    <Button onClick={this.handleOpenModal}
+                    >Add Education</Button>
                 </div>
               
 
                 <div>
                     <div class="left">
-                        <h2> Showcase University</h2>
+                        <Title> Bookmarks</Title>
                         
                         <div>
                             <ul>
@@ -172,12 +195,11 @@ class Mainscreen extends Component {
 
                     <div class="right">
  
-                        <h1> Colleges List</h1>
+                    <Title> Colleges List</Title>
 
                         
                         
-                        <p> name:{this.state.name}</p>
-                        <p>majors: {this.state.majors}</p>
+                        
                         <div>
                             <ul>
                                 {

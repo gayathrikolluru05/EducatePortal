@@ -42,13 +42,13 @@
 .left {
     width: 25%;
     float: left;
-   
+    color: yellowgreen
 }
 
 .right {
     width: 75%;
     float: right;
-   
+    color: darkred
 }
 
 
