@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import React, { Component } from 'react';
 import Routes from './Routes';
-import ReactDOM from 'react-dom';
-import Intro from './Intro';
+//import ReactDOM from 'react-dom';
+//import Intro from './Intro';
 //ReactDOM.render(<Intro />, document.getElementById('root'));
 class App extends Component {
 

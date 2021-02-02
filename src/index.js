@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Intro from './Intro';
-import Mainscreen from './Mainscreen';
+//import App from './App';
+//import Intro from './Intro';
+//import Mainscreen from './Mainscreen';
 import Routes from './Routes';
 import reportWebVitals from './reportWebVitals';
 

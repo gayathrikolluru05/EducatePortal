@@ -1,8 +1,8 @@
-import React, { Component ,  useState }  from 'react';
+import React, { Component  }  from 'react';
 import './App.css';
 import ReactModal from 'react-modal';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-import Dropdown from 'react-dropdown';
+//import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+//import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import styled from 'styled-components';
 
@@ -25,11 +25,7 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-const Para = styled.p`
-  font-size: 1.5em;
-  text-align: center;
-  color: mediumseagreen;
-`;
+
 
 class Mainscreen extends Component {
    

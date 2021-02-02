@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Mainscreen from './Mainscreen';
-import Routes from './Routes';
+//import Mainscreen from './Mainscreen';
+//import Routes from './Routes';
 
-import history from './history';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+//import history from './history';
+import { BrowserRouter as  Redirect } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Title = styled.h1`
